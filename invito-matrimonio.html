@@ -14,8 +14,8 @@
     <style>
       .frame-wrapper {
         padding: 20px;
-        background: linear-gradient(to bottom right, #f8efe6, #e7dcd3);
-        border: 12px double #d6bfb0;
+        background: linear-gradient(to bottom right, #f5f2ee, #e4ede8);
+        border: 12px double #cbbeb0;
         min-height: 100vh;
         box-sizing: border-box;
         display: flex;
@@ -29,20 +29,22 @@
           border-width: 6px;
         }
       }
+
       body {
         font-family: "Playfair Display", serif;
         margin: 0;
         padding: 0;
-        background: #fffaf7;
-        color: #4e4039;
+        background: #fffdfb;
+        color: #4f4742;
         text-align: center;
         line-height: 1.6;
       }
 
       a {
-        color: #a65f5f;
+        color: #6a4f4f;
         text-decoration: none;
       }
+
       a:hover {
         text-decoration: underline;
       }
@@ -52,7 +54,7 @@
         font-family: "Great Vibes", cursive;
         font-size: 2em;
         margin-bottom: 20px;
-        color: #a65f5f;
+        color: #5d5b4f;
       }
 
       .info,
@@ -60,34 +62,18 @@
         font-size: 1.1em;
         margin: 8px 0;
       }
+
       .infoMap {
         height: 50px;
-      }
-
-      .frame-wrapper {
-        padding: 20px;
-        background: linear-gradient(to bottom right, #f8efe6, #e7dcd3);
-        border: 12px double #d6bfb0;
-        min-height: 100vh;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-      }
-      @media (max-width: 600px) {
-        .frame-wrapper {
-          padding: 10px;
-          border-width: 6px;
-        }
       }
 
       .container {
         max-width: 800px;
         margin: 0 auto;
         padding: 0 20px;
-        border: 1px solid #e8dcd2;
-        background: #fffdfb;
-        box-shadow: 0 0 10px rgba(190, 170, 150, 0.1);
+        border: 1px solid #ddd1c7;
+        background: #f9f7f5;
+        box-shadow: 0 0 10px rgba(180, 165, 150, 0.1);
       }
 
       .header {
@@ -95,22 +81,24 @@
         background: url("https://images.unsplash.com/photo-1521714161819-15534968fc5d?auto=format&fit=crop&w=1600&q=80")
           no-repeat center center;
         background-size: cover;
-        color: darksalmon;
+        color: #2a5d5d;
         font-family: "Great Vibes", cursive;
+      }
 
-        h1 {
-          font-size: 4em;
-          margin: 0;
-          animation: fadeIn 2s ease-out;
-          text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-        }
-        p {
-          font-size: 2em;
-          margin-top: 10px;
-          font-style: italic;
-          animation: fadeIn 3s ease-out;
-          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-        }
+      .header h1 {
+        font-size: 4em;
+        margin: 0;
+        animation: fadeIn 2s ease-out;
+        color: #2a5d5d;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 2em;
+        margin-top: 10px;
+        font-style: italic;
+        animation: fadeIn 3s ease-out;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
       }
 
       .details,
@@ -125,6 +113,7 @@
         gap: 12px;
         margin: 30px auto;
       }
+
       .siteMap {
         max-width: 250px;
       }
@@ -134,51 +123,58 @@
         max-width: 500px;
         margin: 40px auto;
         padding: 20px;
-        background: #fdf8f5;
+        background: #fbf8f6;
         border: 1px solid #e8dcd2;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(190, 170, 150, 0.1);
+        box-shadow: 0 0 10px rgba(180, 165, 150, 0.1);
         font-size: 1.05em;
+      }
 
-        a {
-          font-weight: bold;
-        }
-        .album-code {
-          position: relative;
-          display: inline-block;
-          background: #f7e7df;
-          padding: 4px 8px;
-          border-radius: 6px;
-          font-weight: bold;
-          cursor: pointer;
-          user-select: all;
-          transition: background 0.3s;
-        }
-        .album-code:hover {
-          background: #eddcd2;
-        }
-        .copy-tip {
-          position: absolute;
-          top: -30px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: #a65f5f;
-          color: #fffaf7;
-          padding: 4px 8px;
-          font-size: 0.8em;
-          border-radius: 4px;
-          white-space: nowrap;
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity 0.3s ease;
-        }
-        .copy-tip.visible {
-          opacity: 1;
-          visibility: visible;
-        }
-        img {
-          width: 200px;
-        }
+      .qr-code a {
+        font-weight: bold;
+        color: #3d6b6b;
+      }
+
+      .qr-code .album-code {
+        position: relative;
+        display: inline-block;
+        background: #e8f3ef;
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: all;
+        transition: background 0.3s;
+        color: #3d6b6b;
+      }
+
+      .qr-code .album-code:hover {
+        background: #d2ede1;
+      }
+
+      .qr-code .copy-tip {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #7c6c65;
+        color: #fffaf7;
+        padding: 4px 8px;
+        font-size: 0.8em;
+        border-radius: 4px;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+      }
+
+      .qr-code .copy-tip.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .qr-code img {
+        width: 200px;
       }
 
       .carousel {
@@ -188,80 +184,87 @@
         overflow: hidden;
         border-radius: 12px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-        .carousel-images {
-          display: flex;
-          transition: transform 0.5s ease;
-        }
-        .carousel-images img {
-          width: 100%;
-          height: auto;
-          flex: 0 0 100%;
-          object-fit: cover;
-        }
-        .carousel-buttons {
-          position: absolute;
-          top: 50%;
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          transform: translateY(-50%);
-        }
-        .carousel-buttons button {
-          background: rgba(255, 255, 255, 0.7);
-          border: none;
-          font-size: 2rem;
-          padding: 0 15px;
-          cursor: pointer;
-          color: #a65f5f;
-        }
-        .carousel-buttons button:hover {
-          background: rgba(255, 255, 255, 1);
-        }
+      .carousel .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .carousel .carousel-images img {
+        width: 100%;
+        height: auto;
+        flex: 0 0 100%;
+        object-fit: cover;
+      }
+
+      .carousel .carousel-buttons {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+
+      .carousel .carousel-buttons button {
+        background: rgba(255, 255, 255, 0.7);
+        border: none;
+        font-size: 2rem;
+        padding: 0 15px;
+        cursor: pointer;
+        color: #3d6b6b;
+      }
+
+      .carousel .carousel-buttons button:hover {
+        background: rgba(255, 255, 255, 1);
       }
 
       footer {
         margin-top: 30px;
         padding: 20px;
         font-size: 0.9em;
-        background-color: #ececec;
+        background-color: #f0f0ec;
         color: #6e6658;
         border-top: 1px solid #d6ccc2;
+      }
 
-        .copy-wrapper {
-          position: relative;
-          display: inline-block;
-        }
-        .copy-text {
-          display: inline-block;
-          cursor: pointer;
-          padding: 5px 10px;
-          background-color: #f4eae0;
-          border-radius: 6px;
-          color: #a65f5f;
-          font-weight: bold;
-          user-select: all;
-          transition: background 0.2s ease;
-        }
-        .copy-text:hover {
-          background-color: #e0d0c0;
-        }
-        .tooltip {
-          visibility: hidden;
-          opacity: 0;
-          position: absolute;
-          top: -30px;
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: #a65f5f;
-          color: #fffaf7;
-          padding: 4px 8px;
-          font-size: 0.8em;
-          border-radius: 4px;
-          white-space: nowrap;
-          transition: opacity 0.3s ease;
-          pointer-events: none;
-        }
+      footer .copy-wrapper {
+        position: relative;
+        display: inline-block;
+      }
+
+      footer .copy-text {
+        display: inline-block;
+        cursor: pointer;
+        padding: 5px 10px;
+        background-color: #f0f7f2;
+        border-radius: 6px;
+        color: #3d6b6b;
+        font-weight: bold;
+        user-select: all;
+        transition: background 0.2s ease;
+      }
+
+      footer .copy-text:hover {
+        background-color: #e0eae4;
+      }
+
+      footer .tooltip {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #7c6c65;
+        color: #fffaf7;
+        padding: 4px 8px;
+        font-size: 0.8em;
+        border-radius: 4px;
+        white-space: nowrap;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
       }
 
       @keyframes fadeIn {
@@ -412,7 +415,7 @@
             nome e il codice dell'album:
             <span class="album-code" onclick="copyCode(event)">
               IT4b168c8f
-              <span class="copy-tip">Codice copiato!</span>
+              <span class="copy-tip">Copiato!</span>
             </span>
           </p>
 
@@ -456,14 +459,15 @@
         </div>
 
         <footer>
-          Con affetto, Giada & Davide<br />
+          <b>Con affetto, Giada & Davide</b><br />
           <p>
             La vostra presenza sarà il regalo più bello. <br />
             Per chi volesse comunque lasciarci un pensiero per realizzare i
             nostri sogni...
           </p>
-          <p>Davide Nunnari</p>
-          <p>IBAN degli sposi 💖:</p>
+          <p><b>Intestatario:</b> Davide Nunnari</p>
+
+          <b>IBAN degli sposi 💖:</b>
           <div class="copy-wrapper">
             <span class="copy-text" onclick="copyToClipboard(this)">
               IT60X0542811101000000123456
